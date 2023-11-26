@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  mysql:
+  database:
     image: mysql:latest
     restart: unless-stopped
     env_file: .env
@@ -17,3 +17,23 @@ services:
     networks:
       - spring-network
 
+  phpmyadmin:
+    depends_on:
+      - database
+    image: phpmyadmin/phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8081:80"
+    env_file: .env
+    environment:
+      PMA_HOST: database
+      MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
+    networks:
+      - spring-network
+
+volumes:
+  db-data:
+
+networks:
+  spring-network:
+    driver: bridge
