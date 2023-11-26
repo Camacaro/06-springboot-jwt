@@ -1,8 +1,8 @@
 package com.jesus.courses.springboot.jwtauthenticationserver.app.services;
 
 import com.jesus.courses.springboot.jwtauthenticationserver.app.dto.JwtAuthenticationResponse;
-import com.jesus.courses.springboot.jwtauthenticationserver.app.filters.SignInRequest;
-import com.jesus.courses.springboot.jwtauthenticationserver.app.filters.SignUpRequest;
+import com.jesus.courses.springboot.jwtauthenticationserver.app.dto.SignInRequest;
+import com.jesus.courses.springboot.jwtauthenticationserver.app.dto.SignUpRequest;
 import com.jesus.courses.springboot.jwtauthenticationserver.app.models.Role;
 import com.jesus.courses.springboot.jwtauthenticationserver.app.models.User;
 import com.jesus.courses.springboot.jwtauthenticationserver.app.repositories.UserRepository;

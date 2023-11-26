@@ -1,4 +1,4 @@
-package com.jesus.courses.springboot.jwtauthenticationserver.app.filters;
+package com.jesus.courses.springboot.jwtauthenticationserver.app.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
